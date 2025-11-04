@@ -1,56 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Sour Gummy", sans-serif;
-}
-
-body {
-    height: 100vh;
-    background-image: url("https://images.unsplash.com/photo-1583339522870-0d9f28cef33f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.container {
-    position: relative;
-    height: 100vh;
-    margin: auto;
-    background: rgba(255, 255, 255, .1);
-    border: 2px solid rgba(255, 255, 255, .2);
-    border-radius: 30px;
-    backdrop-filter: blur(30px);
-    transform: scale(0);
-    animation: zoom-in 1s ease forwards;
-}
-
-@keyframes zoom-in {
-    100% {
-        transform: scale(1);
-    }
-}
-
-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-}
-
-.animated {
-    transform: translateY(30px);
-    opacity: 0;
-    animation: slide-in 1s ease forwards;
-    animation-delay: 1s;
-}
-
 @keyframes slide-in {
     100% {
         transform: translateY(0);
@@ -58,14 +7,40 @@ header {
     }
 }
 
-.logo {
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Sour Gummy", sans-serif;
+}
+
+:root {
+    color-scheme: dark;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+header {
+    position: sticky;
+    padding: 10px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+header h1 {
     font-size: 25px;
     color: white;
     text-decoration: none;
     font-weight: 600;
 }
 
-.navbar a {
+header nav a {
     font-size: 18px;
     color: white;
     text-decoration: none;
@@ -75,23 +50,33 @@ header {
     transition: .5s;
 }
 
-.navbar a:hover,
-.navbar a.active {
+header nav a:hover,
+header nav a.active {
     border-color: white;
+}
+
+main {
+    margin: 10px 5%;
+    height: calc(100vh - 10vh);
+}
+
+main section {
+    background: rgba(255, 255, 255, .1);
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 30px;
+    backdrop-filter: blur(30px);
 }
 
 .home {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     height: 100%;
-    gap: 50px;
-    padding: 50px 5% 0;
-    color: white;
-    animation-delay: 1.5s;
+    padding: 0 5%;
 }
 
 .home-detail {
-    font-size: 55px;
+    font-size: 40px;
     line-height: 1;
 }
 
@@ -104,9 +89,9 @@ header {
     font-size: 20px;
 }
 
-.btn {
+.curriculum-btn {
     display: inline-block;
-    padding: 5px 20px;
+    padding: 5px 15px;
     background: white;
     border: 2px solid white;
     border-radius: 40px;
@@ -117,14 +102,10 @@ header {
     transition: .5s;
 }
 
-.btn:hover {
+.curriculum-btn:hover {
     background: transparent;
     box-shadow: none;
     color: white;
-}
-
-.home-detail .social-icons {
-    margin-left: 20px;
 }
 
 .home-detail .social-icons a {
@@ -136,6 +117,7 @@ header {
     color: white;
     text-decoration: none;
     margin: 0 8px;
+    transition: 0.3s;
 }
 
 .home-detail .social-icons a:hover {
@@ -144,73 +126,20 @@ header {
     color: #333;
 }
 
-.home-img .img-box {
-    position: relative;
-    width: 28vh;
-    height: 28vh;
-    border: 2px solid white;
-    border-radius: 50%;
-    box-shadow: 0 0 20px white;
-    overflow: hidden;
-}
-
-.home-img .img-box img {
-    position: absolute;
-    top: 30px;
-    display: block;
-    width: 100%;
-    object-fit: cover;
-}
-
-/* header ul {
-    padding: 3px;
-    margin: 10px;
-    border: 1px solid black;
-    border-radius: 10px;
-    display: flex;
-    gap: 5px;
-    list-style: none;
-}
-
-header ul li {
-    padding: 5px;
-}
-
-header ul li a {
-    text-decoration: none;
-}
-
-main {
-    height: 92vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.presentation {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.presentation .text p {
-    font-size: 32px;
-    font-family: "Sour Gummy", sans-serif;
-}
-
-.presentation .text p strong {
-    color: aqua;
-    font-size: 40px;
-}
-
-.presentation .image img {
-    width: 200px;
+.home img {
     border-radius: 10%;
+    border: 2px solid white;
+    box-shadow: 0 0 20px white;
+    transition: 0.3s;
 }
 
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: end;
-} */
+.home img:hover {
+    transform: scale(1.1);
+}
+
+.animated {
+    transform: translateY(30px);
+    opacity: 0;
+    animation: slide-in 1s ease forwards;
+    animation-delay: 1s;
+}
