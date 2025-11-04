@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+@keyframes slide-in {
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Sour Gummy", sans-serif;
+}
+
+:root {
+    color-scheme: dark;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+header {
+    position: sticky;
+    padding: 10px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+header h1 {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+header nav a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    border-bottom: 2px solid transparent;
+    transition: .5s;
+}
+
+header nav a:hover,
+header nav a.active {
+    border-color: white;
+}
+
+main {
+    margin: 10px 5%;
+    height: calc(100vh - 10vh);
+}
+
+main section {
+    background: rgba(255, 255, 255, .1);
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 30px;
+    backdrop-filter: blur(30px);
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 5%;
+}
+
+.home-detail {
+    font-size: 40px;
+    line-height: 1;
+}
+
+.home-detail h2 {
+    font-size: 32px;
+}
+
+.home-detail p {
+    margin: 10px 0 20px;
+    font-size: 20px;
+}
+
+.curriculum-btn {
+    display: inline-block;
+    padding: 5px 15px;
+    background: white;
+    border: 2px solid white;
+    border-radius: 40px;
+    box-shadow: 0 0 10px white;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: .5s;
+}
+
+.curriculum-btn:hover {
+    background: transparent;
+    box-shadow: none;
+    color: white;
+}
+
+.home-detail .social-icons a {
+    display: inline-flex;
+    padding: 8px;
+    border: 2px solid white;
+    border-radius: 50%;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    margin: 0 8px;
+    transition: 0.3s;
+}
+
+.home-detail .social-icons a:hover {
+    background: white;
+    box-shadow: 0 0 10px white;
+    color: #333;
+}
+
+.home img {
+    border-radius: 10%;
+    border: 2px solid white;
+    box-shadow: 0 0 20px white;
+    transition: 0.3s;
+}
+
+.home img:hover {
+    transform: scale(1.1);
+}
+
+.animated {
+    transform: translateY(30px);
+    opacity: 0;
+    animation: slide-in 1s ease forwards;
+    animation-delay: 1s;
+}
