@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+@keyframes slide-in {
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Sour Gummy", sans-serif;
+}
+
+:root {
+    color-scheme: dark;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+header {
+    position: sticky;
+    padding: 10px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+header h1 {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+header nav a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    border-bottom: 2px solid transparent;
+    transition: .5s;
+}
+
+header nav a:hover,
+header nav a.active {
+    border-color: white;
+}
+
+main {
+    margin: 10px 5%;
+    height: calc(100vh - 10vh);
+}
+
+main section {
+    background: rgba(255, 255, 255, .1);
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 30px;
+    backdrop-filter: blur(30px);
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 5%;
+}
+
+.about-detail {
+    line-height: 1;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.about-detail table {
+    border-collapse: collapse;
+    border: 2px solid rgb(140 140 140);
+    font-family: sans-serif;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.about-detail caption {
+    padding: 10px;
+    font-weight: bold;
+}
+
+.about-detail thead {
+    background-color: rgba(228, 240, 245, 0.247);
+}
+
+.about-detail th,
+.about-detail td {
+    border: 1px solid rgb(160, 160, 160);
+    padding: 8px 10px;
+}
+
+.about-detail td:last-of-type {
+    text-align: center;
+}
+
+.about-detail tbody>tr:nth-of-type(even) {
+    background-color: rgba(237, 238, 242, 0.575);
+    color: black;
+}
+
+.animated {
+    transform: translateY(30px);
+    opacity: 0;
+    animation: slide-in 1s ease forwards;
+    animation-delay: 1s;
+}

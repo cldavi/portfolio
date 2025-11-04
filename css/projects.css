@@ -67,7 +67,7 @@ main section {
     backdrop-filter: blur(30px);
 }
 
-.home {
+.projects {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -75,66 +75,35 @@ main section {
     padding: 0 5%;
 }
 
-.home-detail {
-    font-size: 40px;
-    line-height: 1;
+.project-details {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
 }
 
-.home-detail h2 {
-    font-size: 32px;
+.project-details h1 {
+    text-align: center;
 }
 
-.home-detail p {
-    margin: 10px 0 20px;
-    font-size: 20px;
+#repositories {
+    display: grid;
+    grid-column: 4;
+    list-style: none;
 }
 
-.curriculum-btn {
-    display: inline-block;
-    padding: 5px 15px;
-    background: white;
-    border: 2px solid white;
-    border-radius: 40px;
-    box-shadow: 0 0 10px white;
-    color: #333;
-    text-decoration: none;
-    font-weight: 500;
-    transition: .5s;
-}
-
-.curriculum-btn:hover {
-    background: transparent;
-    box-shadow: none;
-    color: white;
-}
-
-.home-detail .social-icons a {
-    display: inline-flex;
-    padding: 8px;
-    border: 2px solid white;
-    border-radius: 50%;
-    font-size: 20px;
+#repositories a {
+    font-size: 1.3rem;
+    text-transform: capitalize;
     color: white;
     text-decoration: none;
-    margin: 0 8px;
-    transition: 0.3s;
 }
 
-.home-detail .social-icons a:hover {
-    background: white;
-    box-shadow: 0 0 10px white;
-    color: #333;
+#repositories a:hover {
+    text-decoration: underline;
 }
 
-.home img {
-    border-radius: 10%;
-    border: 2px solid white;
-    box-shadow: 0 0 20px white;
-    transition: 0.3s;
-}
-
-.home img:hover {
-    transform: scale(1.1);
+#repositories p {
+    color: #868585;
 }
 
 .animated {
